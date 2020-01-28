@@ -1,12 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-  <display-name>gestionEleveV2</display-name>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>DeuxiemeProjetWeb</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/500.jsp</location>
+  </error-page>
+  <servlet>
+    <description></description>
+    <display-name>AuthentificationServlet</display-name>
+    <servlet-name>AuthentificationServlet</servlet-name>
+    <servlet-class>eu.ensup.gestionEleveV2.presentation.AuthentificationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuthentificationServlet</servlet-name>
+    <url-pattern>/AuthentificationServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ConnectionServlet</display-name>
+    <servlet-name>ConnectionServlet</servlet-name>
+    <servlet-class>eu.ensup.gestionEleveV2.presentation.ConnectionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConnectionServlet</servlet-name>
+    <url-pattern>/ConnectionServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

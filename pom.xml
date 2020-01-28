@@ -14,6 +14,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <servlet.version>4.0.1</servlet.version>
+    <servlet.api.version>2.3.3</servlet.api.version>
   </properties>
 
   <dependencies>
@@ -37,6 +39,18 @@
 		 <groupId>org.hibernate</groupId>
 		 <artifactId>hibernate-entitymanager</artifactId>
 		 <version>4.2.6.Final</version>
+	</dependency>
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>${servlet.version}</version>
+	    <scope>provided</scope>
+	</dependency>
+	<dependency>
+	    <groupId>javax.servlet.jsp</groupId>
+	    <artifactId>javax.servlet.jsp-api</artifactId>
+	    <version>${servlet.api.version}</version>
+	    <scope>provided</scope>
 	</dependency>
   </dependencies>
 </project>
