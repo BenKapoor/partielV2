@@ -5,7 +5,7 @@
              http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
              version="2.0">
     <persistence-unit name="gestioneleve">
-    	<class>eu.ensup.monprojetjpa.domaine.Personne</class>
+    	<class>eu.ensup.gestionEleveV2.domaine.Personne</class>
         <properties>
             <property name="hibernate.archive.autodetection" value="class" />
             <!-- <property name="hibernate.show_sql" value="true" /> -->
@@ -18,7 +18,7 @@
             <!-- Spécifie le 'dialecte' SQL utilisé pour communiquer avec la BDD -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
             <!-- Indique a Hibernate de (re-)créer la BDD au lancement de l'application -->
-			<!-- <property name="hibernate.hbm2ddl.auto" value="create" /> -->
+			<property name="hibernate.hbm2ddl.auto" value="create" />
         </properties>
     </persistence-unit>
 </persistence>

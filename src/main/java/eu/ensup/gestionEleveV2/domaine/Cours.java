@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
+@Entity
 public class Cours implements Serializable {
 
 	@Id
@@ -19,6 +20,7 @@ public class Cours implements Serializable {
 	private int nbHeure;
 	@ManyToMany(mappedBy = "cours")
 	private List<Etudiant> etudiants = new ArrayList();
+	
 	public int getIdCours() {
 		return idCours;
 	}
@@ -43,16 +45,17 @@ public class Cours implements Serializable {
 	public void setEtudiants(List<Etudiant> etudiants) {
 		this.etudiants = etudiants;
 	}
-	public Cours() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 	public Cours(int idCours, String libelle, int nbHeure, List<Etudiant> etudiants) {
 		super();
 		this.idCours = idCours;
 		this.libelle = libelle;
 		this.nbHeure = nbHeure;
 		this.etudiants = etudiants;
+	}
+	
+	public Cours() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	
 }

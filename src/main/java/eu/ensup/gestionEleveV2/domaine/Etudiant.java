@@ -1,6 +1,10 @@
 package eu.ensup.gestionEleveV2.domaine;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 
@@ -8,8 +12,8 @@ import javax.persistence.ManyToOne;
 //@DiscriminatorValue("ELEVE") avec la méthode TABLE PER CLASS
 public class Etudiant extends Personne {
 	private String dateNaissance;
-	@ManyToOne
-	private Cours cours;
+	@ManyToMany
+	private List<Cours> cours = new ArrayList();
 
 	public Etudiant() {
 		// TODO Auto-generated constructor stub
@@ -28,16 +32,16 @@ public class Etudiant extends Personne {
 		this.dateNaissance = dateNaissance;
 	}
 
-	public Cours getCours() {
+	public List<Cours> getCours() {
 		return cours;
 	}
 
-	public void setCours(Cours cours) {
+	public void setCours(List<Cours> cours) {
 		this.cours = cours;
 	}
 
 	public Etudiant(int id, String nom, String prenom, String mail, String adresse, int telephone, String dateNaissance,
-			Cours cours) {
+			List<Cours> cours) {
 		super(id, nom, prenom, mail, adresse, telephone);
 		this.dateNaissance = dateNaissance;
 		this.cours = cours;
