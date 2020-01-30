@@ -18,6 +18,8 @@ import eu.ensup.gestionEleveV2.service.AuthentificationService;
  */
 @WebServlet("/ConnectionServlet")
 public class ConnectionServlet extends HttpServlet {
+	public static final String VUE = "/accueil.jsp";
+    public static final String VUE2 = "/error.jsp";
 	private static final long serialVersionUID = 1L;
 	AuthentificationService serviceCo = new AuthentificationService();
 	/**
@@ -42,10 +44,12 @@ public class ConnectionServlet extends HttpServlet {
 		System.out.println(mail);
 		if ( serviceCo.connection(mail, nom) == true) {
 			System.out.println("bienvenue");
-			response.sendRedirect("accueil.jsp");
+			// response.sendRedirect("accueil.jsp");
+			this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
 		} else {
 			System.out.println("wrong password or user name");
-			response.sendRedirect("error.jsp");
+			// response.sendRedirect("error.jsp");
+			this.getServletContext().getRequestDispatcher( VUE2 ).forward( request, response );
 		}
 		String listEtudiant = null;
 		List<Etudiant> list = null;

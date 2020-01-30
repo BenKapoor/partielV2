@@ -37,8 +37,9 @@ public boolean login(String mail,String nom){
 		em = emf.createEntityManager();
 		
 		Query req = em
-				.createQuery("select etu from Personne pers where mail ="+mail+" and nom "+nom);
-		if (req.getFirstResult() == 0) {
+				.createQuery("select p from Personne p where mail ='"+mail+"' and nom ='"+nom+"'");
+		System.out.println(req);
+		if (req.getMaxResults() == 1) {
 			return true;
 		} else {
 			return false;

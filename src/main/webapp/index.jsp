@@ -16,13 +16,13 @@
 	<h1>AUTHENTIFICATION</h1>
 
 	<!-- On intègre un formulaire à la page HTML -->
-	<form id="test" action="ConnectionServlet" method="post">
+	<form id="test" action="authentification" method="post">
 		<div class="login">
-			<p for="nom">Mail :</p> <input type="text" id="mail"
-				name="loginuser" required>
+			<p for="mail">Mail :</p> <input type="text" id="mail"
+				name="mail" required>
 
 			<p for="nom">Nom :</p> <input type="text" id="nom"
-				name="loginuser" required>
+				name="nom" required>
 			<!--  <p for="prenom">MDP :</p> <input type="password"  id="Password" name="mdpuser" required/>-->
 
 		<input type="submit" value="Envoyer">

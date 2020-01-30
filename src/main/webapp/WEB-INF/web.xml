@@ -5,32 +5,27 @@
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-  <error-page>
-    <error-code>404</error-code>
-    <location>/404.jsp</location>
-  </error-page>
+  
   <error-page>
     <error-code>500</error-code>
     <location>/500.jsp</location>
   </error-page>
   <servlet>
     <description></description>
-    <display-name>AuthentificationServlet</display-name>
-    <servlet-name>AuthentificationServlet</servlet-name>
+    <servlet-name>authentification</servlet-name>
     <servlet-class>eu.ensup.gestionEleveV2.presentation.AuthentificationServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>AuthentificationServlet</servlet-name>
-    <url-pattern>/AuthentificationServlet</url-pattern>
+    <servlet-name>authentification</servlet-name>
+    <url-pattern>/authentification</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>ConnectionServlet</display-name>
-    <servlet-name>ConnectionServlet</servlet-name>
+    <servlet-name>connection</servlet-name>
     <servlet-class>eu.ensup.gestionEleveV2.presentation.ConnectionServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ConnectionServlet</servlet-name>
-    <url-pattern>/ConnectionServlet</url-pattern>
+    <servlet-name>connection</servlet-name>
+    <url-pattern>/connection</url-pattern>
   </servlet-mapping>
 </web-app>
