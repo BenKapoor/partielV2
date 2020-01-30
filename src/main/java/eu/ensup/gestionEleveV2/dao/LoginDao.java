@@ -1,5 +1,6 @@
 package eu.ensup.gestionEleveV2.dao;
 
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,19 +32,20 @@ public class LoginDao {
  * @param nom
  * @return
  */
-public boolean login(String mail,String nom){
+public List<Personne> login(String mail,String nom){
 
+		List<Personne> listePersonne = new ArrayList<Personne>();
 		emf = Persistence.createEntityManagerFactory("gestioneleve");
 		em = emf.createEntityManager();
 		
 		Query req = em
 				.createQuery("select p from Personne p where mail ='"+mail+"' and nom ='"+nom+"'");
 		System.out.println(req);
-		if (req.getMaxResults() == 1) {
-			return true;
-		} else {
-			return false;
-		}
-
+		
+		listePersonne = req.getResultList();
+		
+		System.out.println(listePersonne);
+		return listePersonne;
+		
 	}
 }
