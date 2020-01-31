@@ -42,7 +42,7 @@ public class ConnectionServlet extends HttpServlet {
 		String mail = request.getParameter("mail");
 		String nom = request.getParameter("nom");
 		System.out.println(mail);
-		if ( serviceCo.connection(mail, nom) == true) {
+		if ( serviceCo.connection(mail, nom) != null) {
 			System.out.println("bienvenue");
 			// response.sendRedirect("accueil.jsp");
 			this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
