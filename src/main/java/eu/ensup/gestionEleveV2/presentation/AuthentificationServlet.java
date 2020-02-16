@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import eu.ensup.gestionEleveV2.dao.GestionDao;
 import eu.ensup.gestionEleveV2.dao.LoginDao;
+import eu.ensup.gestionEleveV2.domaine.Etudiant;
 import eu.ensup.gestionEleveV2.domaine.Personne;
 import eu.ensup.gestionEleveV2.service.AuthentificationService;
 
@@ -46,6 +47,8 @@ public class AuthentificationServlet extends HttpServlet {
 			throws ServletException, IOException {
 		AuthentificationServlet.LOGGER.debug("Appel à doGet()  pour charger la liste des etudiants.");
 		String idEtudiant = request.getParameter("id");
+
+		
 		
 		if (idEtudiant != null) {
 			request.setAttribute("id", idEtudiant);
@@ -88,5 +91,6 @@ public class AuthentificationServlet extends HttpServlet {
 			RequestDispatcher rs = request.getRequestDispatcher("error.jsp");
 			rs.include(request, response);
 		}
+
 	}
 }
