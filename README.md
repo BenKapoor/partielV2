@@ -6,3 +6,18 @@ Créer une base de donnée gestioneleveV2 dans mysql, importer la base gestionel
 1- Deplacer le fichier GestionEleveV2.war dans le dossier `webapps` de Tomcat 
 2- Executer startup.bat situé dans le dossier `bin` de tomcat 
 3- Dans l'url du navigateur internet, entrer la commande suivante : http://localhost:8080/gestionEleveV2
+
+Identifiant de connection :
+email: benjamin@gmail.com
+nom: Kapoor
+
+Fonctionnalités présentes :
+- Authentifiaction
+- liste des étudiants
+- sessions
+Technologies :
+- bootstrap
+- jsp
+- maven
+- jstl
+- jpa
