@@ -16,6 +16,7 @@ Fonctionnalités présentes :
 - Authentifiaction
 - liste des étudiants
 - sessions
+
 Technologies :
 - bootstrap
 - jsp
