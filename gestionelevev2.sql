@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 28 jan. 2020 à 16:09
+-- Généré le :  lun. 17 fév. 2020 à 13:14
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -66,6 +66,14 @@ CREATE TABLE IF NOT EXISTS `etudiant` (
   KEY `FK_gd34s0lk3wldrdyyhuqnv4smd` (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Déchargement des données de la table `etudiant`
+--
+
+INSERT INTO `etudiant` (`dateNaissance`, `id`) VALUES
+('29/03/1994', 2),
+('18/09/2000', 3);
+
 -- --------------------------------------------------------
 
 --
@@ -95,14 +103,16 @@ CREATE TABLE IF NOT EXISTS `personne` (
   `prenom` varchar(255) DEFAULT NULL,
   `telephone` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `personne`
 --
 
 INSERT INTO `personne` (`id`, `adresse`, `mail`, `nom`, `prenom`, `telephone`) VALUES
-(1, '19 Rue Arthur Croquette', 'benjaminkapoor@yahoo.fr', 'Kapoor', 'Benjamin', 621821781);
+(1, '19 Rue Arthur Croquette', 'test@test', 'test', 'test', 621821781),
+(2, '2 Rue des Tritons', 'etu@etu', 'Etu', 'Jean', 102030405),
+(3, '25 rue Victor Hugo Charenton', 'benjamin@gmail.com', 'Kapoor', 'Benjamin', 621821781);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
