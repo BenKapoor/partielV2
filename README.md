@@ -1,6 +1,7 @@
 # partielV2
 
 Créer une base de donnée gestioneleveV2 dans mysql, importer la base gestioneleveV2.sql
+
 Identifiant de connection de la base : id: "root", password:""
 
 0- Installer TomcatServer 9.0 | Utilisation de Java v.8.x
